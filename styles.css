@@ -109,6 +109,7 @@ body {
 .quote {
   font-family: 'ABC Otto';
   font-size: clamp(24px, 5vw, 35px);
+  font-style: italic;
   text-align: right;
   padding-left: 15%;
   color: #CDD6A0;
