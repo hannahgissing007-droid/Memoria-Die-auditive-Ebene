@@ -222,7 +222,8 @@ body {
   border-radius: 30px;
   border: 1px solid #CDD6A0;
   background: rgba(205, 214, 160, 0.2);
-  font-size: 13.5px;
+  font-size: 14.5px;
+  letter-spacing: 1%;
 }
 
 .tab.active {
@@ -241,7 +242,8 @@ body {
 .section-subtitle {
   font-family: 'Zeist';
   font-weight: medium;
-  font-size: 14px;
+  font-size: 14.5px;
+  letter-spacing: 1.5%;
   color: #485640;
   margin-top: 7px;
   padding-right: 7%;
@@ -268,6 +270,7 @@ body {
 .body-text.regular {
   font-family: Zeist;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 14.5px;
+  letter-spacing: 2%;
   line-height: 1.5;
 }
