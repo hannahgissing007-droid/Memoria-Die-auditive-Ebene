@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="page-wrapper">
+
+    <!-- HERO -->
+    <section class="hero-container">
+      <div class="hero-bg"></div>
+      <div class="top-fade"></div>
+      <div class="bottom-fade"></div>
+
+      <!-- HEADER JETZT IM HERO -->
+      <header class="header hero-header">
+        <h1 class="main-title">MEMORIA</h1>
+      </header>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <p class="quote">„Das Schönste, was es gibt an einem Menschen, der immer in deinem Herzen bleibt.“</p>
+      <p class="quote-author">Ingrid Zettl</p>
+    </section>
+
+    <!-- PLAYER -->
+    <section class="player-section">
+
+      <div class="player-card">
+        <div class="player-info">
+          <p id="track-title" class="track-title">
+            Pflege, Demenz und Abschied
+          </p>
+          <span id="track-duration" class="track-time">
+            0:00 / --:--
+          </span>
+        </div>
+
+        <button id="play-trigger" class="play-btn">
+          <svg viewBox="0 0 24 24">
+            <path id="play-icon" d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+
+        <div id="progress-click" class="progress-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs" id="tabs"></div>
+
+    </section>
+
+    <!-- TEXT -->
+    <section class="content">
+
+      <div class="text-block left">
+        <p class="section-title">Ein Jahr im Altersheim</p>
+        <p class="section-subtitle">
+          Persönliche Erfahrungen, Herausforderungen und die Bedeutung von Erinnerungen im Leben älterer Menschen.
+        </p>
+
+        <p class="body-text regular">
+          Im Interview berichtet Jana Haage von ihren Erfahrungen während ihres Freiwilligen Sozialen Jahres in einem
+          Pflegewohnhaus. Sie beschreibt den Alltag, den Umgang mit älteren Menschen und besonders mit Demenzkranken,
+          sowie die emotionalen Herausforderungen und bereichernden Momente.
+
+          Zentral ist für sie die Bedeutung von Erinnerungen, die den Bewohnern Halt geben und ihre Identität prägen.
+          Jana betont, dass sie durch diese Zeit mehr Empathie, Achtsamkeit und Selbstvertrauen entwickelt hat und
+          persönlich daran gewachsen ist.
+        </p>
+      </div>
+
+      <div class="text-block right">
+        <p class="section-title">Memoria</p>
+
+        <p class="body-text regular">
+          Dieses Projekt beschäftigt sich mit der Frage, wie Erinnerungen entstehen und was sie für uns bedeuten. Dabei
+          verbindet es wissenschaftliche Erkenntnisse über die Prozesse im Gehirn mit der emotionalen Bedeutung von
+          Erinnerungen für unser Leben.
+
+          Ausgehend von einer persönlichen Erfahrung mit Demenz stellt das Projekt die zentrale Frage: "Was bleibt, wenn
+          Erinnerungen verschwinden?" Neben der neurobiologischen Perspektive kommen auch Menschen zu Wort, die ihre
+          eigenen Erfahrungen teilen und zeigen, dass Erinnerungen mehr sind als Wissen – sie sind Gefühl und
+          Verbindung.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <audio id="audio-player"></audio>
+
+  <script>
+    const TRACKS = [
+      { title: "Pflege, Demenz und Abschied", file: "audio/track1.mp3" },
+      { title: "Mein Opa", file: "audio/track2.mp3" },
+      { title: "Ein Jahr im Altersheim", file: "audio/track3.mp3" },
+      { title: "Alles über MDMR", file: "audio/track4.mp3" }
+    ];
+
+    const audio = document.getElementById("audio-player");
+    const playBtn = document.getElementById("play-trigger");
+    const playIcon = document.getElementById("play-icon");
+    const title = document.getElementById("track-title");
+    const time = document.getElementById("track-duration");
+    const progress = document.getElementById("progress-bar");
+    const progressClick = document.getElementById("progress-click");
+    const tabs = document.getElementById("tabs");
+
+    let current = 0;
+
+    /* TABS */
+    TRACKS.forEach((track, i) => {
+      const el = document.createElement("div");
+      el.className = "tab";
+      el.innerText = track.title;
+
+      el.onclick = () => {
+        loadTrack(i);
+        audio.play();
+      };
+
+      tabs.appendChild(el);
+    });
+
+    /* LOAD */
+    function loadTrack(i) {
+      current = i;
+      audio.src = TRACKS[i].file;
+      title.innerText = TRACKS[i].title;
+      highlight();
+    }
+
+    /* ACTIVE TAB */
+    function highlight() {
+      document.querySelectorAll(".tab").forEach((t, i) => {
+        t.classList.toggle("active", i === current);
+      });
+    }
+
+    /* PLAY */
+    playBtn.onclick = () => {
+      audio.paused ? audio.play() : audio.pause();
+    };
+
+    /* ICON */
+    audio.onplay = () => playIcon.setAttribute("d", "M6 5h4v14H6zm8 0h4v14h-4z");
+    audio.onpause = () => playIcon.setAttribute("d", "M8 5v14l11-7z");
+
+    /* TIME */
+    audio.ontimeupdate = () => {
+      if (!audio.duration) return;
+
+      const p = (audio.currentTime / audio.duration) * 100;
+      progress.style.width = p + "%";
+
+      time.innerText =
+        `${Math.floor(audio.currentTime / 60)}:${Math.floor(audio.currentTime % 60).toString().padStart(2, '0')} / 
+     ${Math.floor(audio.duration / 60)}:${Math.floor(audio.duration % 60).toString().padStart(2, '0')}`;
+    };
+
+    /* SEEK */
+    progressClick.onclick = (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+    };
+
+    loadTrack(0);
+  </script>
+
+</body>
+
+</html>

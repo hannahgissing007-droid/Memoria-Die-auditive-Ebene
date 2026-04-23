@@ -1,0 +1,269 @@
+/* FONTS */
+@font-face {
+  font-family: 'Zeist';
+  src: url('fonts/Zeist L2 Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Zeist';
+  src: url('fonts/Zeist L2 Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'ABC Otto';
+  src: url('fonts/ABCOtto-MediumItalic-Trial.woff2') format('woff2');
+  font-style: italic;
+}
+
+/* BASE */
+body {
+  margin: 0;
+  background: #CDD6A0;
+  font-family: 'Zeist';
+  font-weight: 500;
+  color: #485640;
+}
+
+/* WRAPPER */
+.page-wrapper {
+  background: #F8F8F3;
+  min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .page-wrapper {
+    max-width: 600px;
+    margin: 60px auto;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* HERO */
+.hero-container {
+  position: relative;
+  /* height: 200px; */
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: #F8F8F3;
+}
+
+/* .top-fade {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  background: linear-gradient(to bottom, #CDD6A0, transparent);
+}
+
+.bottom-fade {
+  position: absolute;
+  bottom: 0;
+  height: 140px;
+  width: 100%;
+  background: linear-gradient(to top, #CDD6A0, transparent);
+} */
+
+.top-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25dvh;
+  background: linear-gradient(to bottom, #CDD6A0, transparent 100%);
+  z-index: 15;
+}
+
+/* .bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35dvh;
+  background: linear-gradient(to top, #CDD6A0, transparent 100%);
+  z-index: 15;
+} */
+
+
+/* HEADER */
+.header {
+  padding: 10px 25px 0;
+}
+
+.main-title {
+  font-size: clamp(15px, 6vw, 25px);
+  letter-spacing: 10%;
+}
+
+/* QUOTE */
+.quote-section {
+  padding: 100px 25px;
+}
+
+.quote {
+  font-family: 'ABC Otto';
+  font-size: clamp(24px, 5vw, 35px);
+  text-align: right;
+  padding-left: 15%;
+  color: #CDD6A0;
+}
+
+.quote-author {
+  font-family: 'ABC Otto';
+  font-style: italic;
+  text-align: right;
+  color: #7A8060;
+}
+
+/* PLAYER */
+.player-section {
+  padding: 0 24px 80px;
+}
+
+.player-card {
+  background: rgba(205, 214, 160, 0.2);
+  border: 0.5px solid #CDD6A0;
+  border-radius: 50px;
+  backdrop-filter: blur(25px);
+  padding: 7px 25px;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+/* player-card {
+  width: 100%;
+  background: rgba(205, 214, 160, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  z-index: 120;
+} */
+
+.track-title {
+  font-family: 'Zeist';
+  font-weight: medium;
+  font-size: 18.5px;
+  color: #485640;
+}
+.track-time {
+  display: inline-block; 
+  margin-bottom: 7px;
+  font-family: 'Zeist';
+  font-weight: medium;
+  font-size: 13.5px;
+  color: #7A8060;
+}
+
+.play-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #CDD6A0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #485640;
+  transition: width 0.1s linear;
+}
+
+/* .progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #485640;
+} */
+
+/* TABS */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 35px;
+  padding: 0 10px;
+   /* padding-left: 15px; */
+}
+
+.tab {
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid #CDD6A0;
+  background: rgba(205, 214, 160, 0.2);
+  font-size: 13.5px;
+}
+
+.tab.active {
+  background: #CDD6A0;
+}
+
+.section-title {
+  font-family: 'Zeist';
+  font-weight: medium;
+  font-size: 18px;
+  letter-spacing: 1%;
+  color: #485640;
+  margin-top: 40px; 
+}
+
+.section-subtitle {
+  font-family: 'Zeist';
+  font-weight: medium;
+  font-size: 14px;
+  color: #485640;
+  margin-top: 7px;
+  padding-right: 7%;
+}
+
+/* TEXT */
+.content {
+  padding: 0 25px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.text-block.left {
+  text-align: left;
+  padding-right: 5%;
+}
+
+.text-block.right {
+  text-align: right;
+  padding-left: 5%;
+}
+
+.body-text.regular {
+  font-family: Zeist;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+}
