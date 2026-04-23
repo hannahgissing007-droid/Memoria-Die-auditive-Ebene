@@ -103,16 +103,13 @@ body {
 
 /* QUOTE */
 .quote-section {
-  padding: 100px 25px;
-  font-family: 'ABC Otto';
-  font-style: italic;
-  text-align: right;
+  padding: 175px 25px;
 }
 
 .quote {
   font-family: 'ABC Otto';
-  font-size: clamp(27px, 5vw, 35px);
   font-style: italic;
+  font-size: clamp(27px, 5vw, 35px);
   text-align: right;
   padding-left: 15%;
   color: #CDD6A0;
@@ -123,6 +120,7 @@ body {
   font-style: italic;
   text-align: right;
   color: #7A8060;
+  padding-bottom: 20px;
 }
 
 /* PLAYER */
@@ -164,14 +162,16 @@ body {
   font-family: 'Zeist';
   font-weight: medium;
   font-size: 18.5px;
+  letter-spacing: 1%;
   color: #485640;
 }
 .track-time {
-  display: inline-block; 
+  display: inline flow-root;
   margin-bottom: 7px;
   font-family: 'Zeist';
   font-weight: medium;
-  font-size: 13.5px;
+  font-size: 14.5px;
+  letter-spacing: 2%;
   color: #7A8060;
 }
 
@@ -242,8 +242,8 @@ body {
 .section-subtitle {
   font-family: 'Zeist';
   font-weight: medium;
-  font-size: 14.5px;
-  letter-spacing: 1.5%;
+  font-size: 15px;
+  letter-spacing: 2%;
   color: #485640;
   margin-top: 7px;
   padding-right: 7%;
