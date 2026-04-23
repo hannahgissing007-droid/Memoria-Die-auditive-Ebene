@@ -104,6 +104,9 @@ body {
 /* QUOTE */
 .quote-section {
   padding: 100px 25px;
+  font-family: 'ABC Otto';
+  font-style: italic;
+  text-align: right;
 }
 
 .quote {
