@@ -1,183 +1,219 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memoria</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <main class="page-wrapper">
+  <div class="page-wrapper">
 
-    <!-- HERO -->
-    <section class="hero-container">
-      <div class="hero-bg"></div>
-      <div class="top-fade"></div>
-      <div class="bottom-fade"></div>
+    <!-- ── INTERVIEW VIEWS ── -->
 
-      <!-- HEADER JETZT IM HERO -->
-      <header class="header hero-header">
-        <h1 class="main-title">MEMORIA</h1>
-      </header>
-    </section>
+    <!-- 1 · Jana Haage -->
+    <article class="interview-view active" id="view-jana">
 
-    <!-- QUOTE -->
-    <section class="quote-section">
-      <p class="quote">„Das Schönste, was es gibt an einem Menschen, der immer in deinem Herzen bleibt.“</p>
-      <p class="quote-author">Ingrid Zettl</p>
-    </section>
+      <!-- Image flush to top -->
+      <div class="portrait-stage">
+        <img src="media/Duplex_Jana_Radialer Verlauf.png" alt="Jana Haage" class="portrait-img">
+        
+        <!-- MEMORIA title overlaid top-left -->
+        <header class="site-header">
+          <h1 class="main-title">Memoria</h1>
+        </header>
+      </div>
 
-    <!-- PLAYER -->
-    <section class="player-section">
+      <div class="quote-section">
+        <p class="quote">„Erinnerungen sind das Leben."</p>
+        <p class="quote-author">Jana Haage</p>
+      </div>
 
-      <div class="player-card">
-        <div class="player-info">
-          <p id="track-title" class="track-title">
-            Pflege, Demenz und Abschied
-          </p>
-          <span id="track-duration" class="track-time">
-            0:00 / --:--
-          </span>
-        </div>
-
-        <button id="play-trigger" class="play-btn">
-          <svg viewBox="0 0 24 24">
-            <path id="play-icon" d="M8 5v14l11-7z" />
-          </svg>
-        </button>
-
-        <div id="progress-click" class="progress-container">
-          <div id="progress-bar" class="progress-bar"></div>
+      <div class="player-section">
+        <div class="player-card">
+          <div class="player-info">
+            <p class="track-title">Ein Jahr im Pflegeheim</p>
+            <span class="track-time" id="time-jana">0:00 / --:--</span>
+          </div>
+          <button class="play-btn" data-id="jana" aria-label="Abspielen">
+            <svg viewBox="0 0 24 24" class="btn-icon"><path class="icon-path" d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="progress-container" data-id="jana">
+            <div class="progress-bar" id="prog-jana"></div>
+          </div>
         </div>
       </div>
 
-      <!-- TABS -->
-      <div class="tabs" id="tabs"></div>
+      <!-- Tabs below player -->
+      <nav class="tabs-nav" aria-label="Interview auswählen">
+        <button class="tab active" data-target="jana">Ein Jahr im Pflegeheim</button>
+        <button class="tab" data-target="ingrid">Pflege, Demenz und Abschied</button>
+        <button class="tab" data-target="hannah">Wahrnehmung &amp; Erinnerung</button>
+        <button class="tab" data-target="daniela">Alles über EMDR</button>
+      </nav>
 
-    </section>
-
-    <!-- TEXT -->
-    <section class="content">
-
-      <div class="text-block left">
-        <p class="section-title">Ein Jahr im Altersheim</p>
-        <p class="section-subtitle">
-          Persönliche Erfahrungen, Herausforderungen und die Bedeutung von Erinnerungen im Leben älterer Menschen.
-        </p>
-
-        <p class="body-text regular">
-          Im Interview berichtet Jana Haage von ihren Erfahrungen während ihres Freiwilligen Sozialen Jahres in einem
-          Pflegewohnhaus. Sie beschreibt den Alltag, den Umgang mit älteren Menschen und besonders mit Demenzkranken,
-          sowie die emotionalen Herausforderungen und bereichernden Momente.
-
-          Zentral ist für sie die Bedeutung von Erinnerungen, die den Bewohnern Halt geben und ihre Identität prägen.
-          Jana betont, dass sie durch diese Zeit mehr Empathie, Achtsamkeit und Selbstvertrauen entwickelt hat und
-          persönlich daran gewachsen ist.
-        </p>
+      <div class="content-section">
+        <p class="section-title">Ein Jahr im Pflegeheim</p>
+        <p class="section-subtitle">Jana Haage im Gespräch mit Hannah Gissing</p>
+        <p class="body-text">Jana Haage berichtet von ihrem Freiwilligen Sozialen Jahr in einem Pflegewohnhaus in Graz. Sie beschreibt den Alltag mit älteren Menschen – insbesondere den Umgang mit Demenzerkrankungen –, die emotionalen Herausforderungen und bereichernden Momente. Für Jana sind Erinnerungen das Fundament menschlicher Identität: Sie geben den Bewohnern Halt und zeigen, wie eng Erinnern und Selbstsein miteinander verknüpft sind.</p>
       </div>
 
-      <div class="text-block right">
-        <p class="section-title">Memoria</p>
+    </article>
 
-        <p class="body-text regular">
-          Dieses Projekt beschäftigt sich mit der Frage, wie Erinnerungen entstehen und was sie für uns bedeuten. Dabei
-          verbindet es wissenschaftliche Erkenntnisse über die Prozesse im Gehirn mit der emotionalen Bedeutung von
-          Erinnerungen für unser Leben.
+    <!-- 2 · Ingrid Zettl -->
+    <article class="interview-view" id="view-ingrid">
 
-          Ausgehend von einer persönlichen Erfahrung mit Demenz stellt das Projekt die zentrale Frage: "Was bleibt, wenn
-          Erinnerungen verschwinden?" Neben der neurobiologischen Perspektive kommen auch Menschen zu Wort, die ihre
-          eigenen Erfahrungen teilen und zeigen, dass Erinnerungen mehr sind als Wissen – sie sind Gefühl und
-          Verbindung.
-        </p>
+      <div class="portrait-stage">
+        <img src="media/Duplex_Radiler Verlauf_Website_Ingrid und Opa-2.png" alt="Ingrid Zettl" class="portrait-img">
+        <div class="portrait-fade-bottom"></div>
+        <header class="site-header">
+          <h1 class="main-title">Memoria</h1>
+        </header>
       </div>
 
+      <div class="quote-section">
+        <p class="quote">„Das Schönste, was es gibt an einem Menschen, der immer in deinem Herzen bleibt."</p>
+        <p class="quote-author">Ingrid Zettl</p>
+      </div>
+
+      <div class="player-section">
+        <div class="player-card">
+          <div class="player-info">
+            <p class="track-title">Pflege, Demenz und Abschied</p>
+            <span class="track-time" id="time-ingrid">0:00 / --:--</span>
+          </div>
+          <button class="play-btn" data-id="ingrid" aria-label="Abspielen">
+            <svg viewBox="0 0 24 24" class="btn-icon"><path class="icon-path" d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="progress-container" data-id="ingrid">
+            <div class="progress-bar" id="prog-ingrid"></div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="tabs-nav" aria-label="Interview auswählen">
+        <button class="tab" data-target="jana">Ein Jahr im Pflegeheim</button>
+        <button class="tab active" data-target="ingrid">Pflege, Demenz und Abschied</button>
+        <button class="tab" data-target="hannah">Wahrnehmung &amp; Erinnerung</button>
+        <button class="tab" data-target="daniela">Alles über EMDR</button>
+      </nav>
+
+      <div class="content-section">
+        <p class="section-title">Pflege, Demenz und Abschied</p>
+        <p class="section-subtitle">Ingrid Zettl im Gespräch mit Hannah Gissing</p>
+        <p class="body-text">Ingrid Zettl gibt einen persönlichen Einblick in ihre Erfahrungen als pflegende Angehörige ihres Vaters, der an Demenz erkrankte. Sie schildert die ersten Anzeichen der Erkrankung, die schrittweisen Veränderungen im Alltag und den emotionalen Umgang mit dem fortschreitenden Verlust. Trotz allem blieben Nähe, Dankbarkeit und Menschlichkeit bis zuletzt bestehen.</p>
+      </div>
+
+    </article>
+
+    <!-- 3 · Hannah Gissing -->
+    <article class="interview-view" id="view-hannah">
+
+      <div class="portrait-stage">
+        <img src="media/Opa_Hg_Radialer Verlauf.png" alt="Hannah Gissing und Opa" class="portrait-img">
+        <div class="portrait-fade-bottom"></div>
+        <header class="site-header">
+          <h1 class="main-title">Memoria</h1>
+        </header>
+      </div>
+
+      <div class="quote-section">
+        <p class="quote">„Erinnerungen verbinden uns mit dem, was war und mit dem, was kommen wird."</p>
+        <p class="quote-author">Hannah Gissing</p>
+      </div>
+
+      <div class="player-section">
+        <div class="player-card">
+          <div class="player-info">
+            <p class="track-title">Wahrnehmung &amp; Erinnerung</p>
+            <span class="track-time" id="time-hannah">0:00 / --:--</span>
+          </div>
+          <button class="play-btn" data-id="hannah" aria-label="Abspielen">
+            <svg viewBox="0 0 24 24" class="btn-icon"><path class="icon-path" d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="progress-container" data-id="hannah">
+            <div class="progress-bar" id="prog-hannah"></div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="tabs-nav" aria-label="Interview auswählen">
+        <button class="tab" data-target="jana">Ein Jahr im Pflegeheim</button>
+        <button class="tab" data-target="ingrid">Pflege, Demenz und Abschied</button>
+        <button class="tab active" data-target="hannah">Wahrnehmung &amp; Erinnerung</button>
+        <button class="tab" data-target="daniela">Alles über EMDR</button>
+      </nav>
+
+      <div class="content-section">
+        <p class="section-title">Wahrnehmung &amp; Erinnerung</p>
+        <p class="section-subtitle">Hannah Gissing im Gespräch mit Bernhard Gissing</p>
+        <p class="body-text">In diesem Interview wird Hannah selbst zur Interviewten. Ihr Vater Bernhard befragt sie über ihre Beziehung zu ihrem Großvater – wie sich Wahrnehmung, Persönlichkeit und Nähe im Verlauf seiner Demenzerkrankung verändert haben. Es wird sichtbar, wie sich aus einer zunächst distanzierten Beziehung eine tiefe emotionale Verbindung entwickeln kann.</p>
+      </div>
+
+    </article>
+
+    <!-- 4 · Daniela Aflenzer -->
+    <article class="interview-view" id="view-daniela">
+
+      <div class="portrait-stage">
+        <img src="media/Original_Mag. Daniela Aflenzer_Radialer Verlauf.png" alt="Mag. Daniela Aflenzer" class="portrait-img">
+        <div class="portrait-fade-bottom"></div>
+        <header class="site-header">
+          <h1 class="main-title">Memoria</h1>
+        </header>
+      </div>
+
+      <div class="quote-section">
+        <p class="quote">„Erinnerungen sind das, was uns Menschen ausmacht, was uns unterscheidet von Du und Ich."</p>
+        <p class="quote-author">Mag. Daniela Aflenzer</p>
+      </div>
+
+      <div class="player-section">
+        <div class="player-card">
+          <div class="player-info">
+            <p class="track-title">Alles über EMDR</p>
+            <span class="track-time" id="time-daniela">0:00 / --:--</span>
+          </div>
+          <button class="play-btn" data-id="daniela" aria-label="Abspielen">
+            <svg viewBox="0 0 24 24" class="btn-icon"><path class="icon-path" d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="progress-container" data-id="daniela">
+            <div class="progress-bar" id="prog-daniela"></div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="tabs-nav" aria-label="Interview auswählen">
+        <button class="tab" data-target="jana">Ein Jahr im Pflegeheim</button>
+        <button class="tab" data-target="ingrid">Pflege, Demenz und Abschied</button>
+        <button class="tab" data-target="hannah">Wahrnehmung &amp; Erinnerung</button>
+        <button class="tab active" data-target="daniela">Alles über EMDR</button>
+      </nav>
+
+      <div class="content-section">
+        <p class="section-title">Alles über EMDR</p>
+        <p class="section-subtitle">Mag. Daniela Aflenzer im Gespräch mit Hannah Gissing</p>
+        <p class="body-text">Die klinische Psychologin Mag. Daniela Aflenzer erklärt, welche Rolle Erinnerungen für unsere psychische Stabilität spielen – insbesondere bei traumatischen Erlebnissen. Sie gibt Einblick in die Methode EMDR, die als Goldstandard der Traumatherapie gilt, und beschreibt, was im Gehirn passiert, wenn belastende Erinnerungen verarbeitet werden.</p>
+      </div>
+
+    </article>
+
+    <!-- ── ABOUT MEMORIA (shared, always visible) ── -->
+    <section class="about-section">
+      <p class="section-title">Memoria</p>
+      <p class="body-text">Dieses Projekt beschäftigt sich mit der Frage, wie Erinnerungen entstehen und was sie für uns bedeuten. Es verbindet wissenschaftliche Erkenntnisse über die Prozesse im Gehirn mit der emotionalen Dimension des Erinnerns. Ausgehend von einer persönlichen Erfahrung mit Demenz stellt das Projekt die zentrale Frage: Was bleibt, wenn Erinnerungen verschwinden? Neben der neurobiologischen Perspektive kommen Menschen zu Wort, die eigene Erfahrungen teilen – und zeigen, dass Erinnerungen mehr sind als Wissen. Sie sind Gefühl und Verbindung.</p>
     </section>
 
-  </main>
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer">
+      <p class="footer-text">Hannah Gissing · Abschlussarbeit 2025</p>
+      <p class="footer-text">New Design University · St. Pölten</p>
+    </footer>
 
-  <audio id="audio-player"></audio>
+  </div><!-- /page-wrapper -->
 
-  <script>
-    const TRACKS = [
-      { title: "Pflege, Demenz und Abschied", file: "media/Pflege, Demenz und Abschied.mp3" },
-      { title: "Mein Opa", file: "media/Mein Opa.mp3" },
-      { title: "Ein Jahr im Altersheim", file: "media/Ein Jahr im Altersheim.m4a" },
-      { title: "Alles über EMDR", file: "media/Alles über EMDR.mp3" }
-    ];
-
-    const audio = document.getElementById("audio-player");
-    const playBtn = document.getElementById("play-trigger");
-    const playIcon = document.getElementById("play-icon");
-    const title = document.getElementById("track-title");
-    const time = document.getElementById("track-duration");
-    const progress = document.getElementById("progress-bar");
-    const progressClick = document.getElementById("progress-click");
-    const tabs = document.getElementById("tabs");
-
-    let current = 0;
-
-    /* TABS */
-    TRACKS.forEach((track, i) => {
-      const el = document.createElement("div");
-      el.className = "tab";
-      el.innerText = track.title;
-
-      el.onclick = () => {
-        loadTrack(i);
-        audio.play();
-      };
-
-      tabs.appendChild(el);
-    });
-
-    /* LOAD */
-    function loadTrack(i) {
-      current = i;
-      audio.src = TRACKS[i].file;
-      title.innerText = TRACKS[i].title;
-      highlight();
-    }
-
-    /* ACTIVE TAB */
-    function highlight() {
-      document.querySelectorAll(".tab").forEach((t, i) => {
-        t.classList.toggle("active", i === current);
-      });
-    }
-
-    /* PLAY */
-    playBtn.onclick = () => {
-      audio.paused ? audio.play() : audio.pause();
-    };
-
-    /* ICON */
-    audio.onplay = () => playIcon.setAttribute("d", "M6 5h4v14H6zm8 0h4v14h-4z");
-    audio.onpause = () => playIcon.setAttribute("d", "M8 5v14l11-7z");
-
-    /* TIME */
-    audio.ontimeupdate = () => {
-      if (!audio.duration) return;
-
-      const p = (audio.currentTime / audio.duration) * 100;
-      progress.style.width = p + "%";
-
-      time.innerText =
-        `${Math.floor(audio.currentTime / 60)}:${Math.floor(audio.currentTime % 60).toString().padStart(2, '0')} / 
-     ${Math.floor(audio.duration / 60)}:${Math.floor(audio.duration % 60).toString().padStart(2, '0')}`;
-    };
-
-    /* SEEK */
-    progressClick.onclick = (e) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-    };
-
-    loadTrack(0);
-  </script>
-
+  <audio id="global-audio"></audio>
+  <script src="script.js"></script>
 </body>
-
 </html>
