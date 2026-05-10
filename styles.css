@@ -1,11 +1,11 @@
 /* ─── FONTS ─── */
 @font-face {
-  font-family: 'Zeist Regular';
+  font-family: 'Zeist Regular', sans-serif;
   src: url('fonts/Zeist L2 Regular.otf') format('opentype');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Zeist Medium';
+  font-family: 'Zeist Medium', sans-serif;
   src: url('fonts/Zeist L2 Medium.otf') format('opentype');
   font-weight: 500;
 }
@@ -31,7 +31,7 @@
 
 body {
   background: #edede3;
-  font-family: 'Zeist regular';
+  font-family: 'Zeist Regular', sans-serif;
   font-weight: 400;
   color: #485640;
   min-height: 100vh;
@@ -171,7 +171,7 @@ body {
 }
 
 .track-title {
-  font-family: 'Zeist', serif;
+  font-family: 'Zeist Regular', sans-serif;
   font-weight: 500;
   font-size: 17px;
   letter-spacing: 0.01em;
@@ -182,7 +182,7 @@ body {
 }
 
 .track-time {
-  font-family: 'Zeist', serif;
+  font-family: 'Zeist Regular', sans-serif;
   font-weight: 400;
   font-size: 12px;
   color: #7A8060;
@@ -286,7 +286,7 @@ body {
 }
 
 .section-subtitle {
-  font-family: 'Zeist', serif;
+  font-family: 'Zeist Medium', sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 13px;
@@ -296,7 +296,7 @@ body {
 }
 
 .body-text {
-  font-family: 'Zeist', serif;
+  font-family: 'Zeist Regular', sans-serif;
   font-weight: 400;
   font-size: 14.5px;
   letter-spacing: 0.01em;
@@ -525,7 +525,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Zeist';
+  font-family: 'Zeist Medium', sans-serif;
   font-weight: medium;
   font-size: 18px;
   letter-spacing: 1%;
@@ -534,7 +534,7 @@ body {
 }
 
 .section-subtitle {
-  font-family: 'Zeist';
+  font-family: 'Zeist Medium', sans-serif;
   font-weight: medium;
   font-size: 15px;
   letter-spacing: 2%;
@@ -562,7 +562,7 @@ body {
 }
 
 .body-text.regular {
-  font-family: Zeist;
+  font-family: 'Zeist Regular', sans-serif;
   font-weight: 300;
   font-size: 14.5px;
   letter-spacing: 2%;
